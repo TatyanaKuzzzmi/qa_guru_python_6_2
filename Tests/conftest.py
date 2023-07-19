@@ -1,9 +1,5 @@
 import pytest
-
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="module")
 def browser():
-    print("Браузер стартует!")
-
-    yield
-
-    print("Браузер закрывается")
+    browser.config.window_width = 1920
+    browser.config.window_height = 1080
